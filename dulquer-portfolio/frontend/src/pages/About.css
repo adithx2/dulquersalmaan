@@ -1,0 +1,129 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --accent-gold: #c5a059;
+  --text-gray: #b0b0b0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.about-wrapper {
+
+  padding: 14px;
+}
+
+/* Header Responsiveness */
+.header-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), var(--bg-dark));
+  padding: 80px 0;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-image-container {
+  flex: 0 0 350px;
+  height: 500px;
+  background-color: #222;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/85/Dulquer_Salmaan_at_Zoya_Factor_Trailer_Launch_function_%28cropped%29.jpg);
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tablet/Mobile Header */
+@media (max-width: 991px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-image-container {
+    flex: 0 0 300px;
+    width: 300px;
+  }
+}
+
+/* Gallery Grid System */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 479px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 column on phone */
+  }
+}
+
+.gallery-item {
+  height: 400px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  border: 1px solid var(--accent-gold);
+}
+
+/* Family Flex Section */
+.family-flex {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.family-img {
+  flex: 1;
+  height: 400px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .family-flex {
+    flex-direction: column;
+  }
+  .family-img {
+    height: 250px;
+  }
+}
+
+/* Typography Styling */
+.header-title {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 479px) {
+  .header-title { font-size: 2.5rem; }
+}
+
+.award-badge {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,127 @@
+.film-detail {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.film-detail__back {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+
+.film-detail__back:hover { color: var(--gold); }
+
+.film-detail__grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.film-detail__poster {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  background: var(--dark-3);
+}
+
+.film-detail__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.film-detail__poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-3);
+}
+
+.film-detail__poster-placeholder span {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.25;
+}
+
+.film-detail__title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0.5rem 0 1rem;
+}
+
+.film-detail__note {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.film-detail__meta-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.film-detail__meta-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.film-detail__meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.film-detail__meta-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.film-detail__meta-value--gold { color: var(--gold); }
+
+.film-detail__status {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.film-detail__status.released {
+  background: rgba(46, 160, 67, 0.15);
+  color: #3fb950;
+}
+
+.film-detail__status.upcoming {
+  background: rgba(200, 134, 10, 0.15);
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .film-detail__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .film-detail__poster {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .film-detail__title { font-size: 1.8rem; }
+}

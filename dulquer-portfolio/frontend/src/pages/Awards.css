@@ -1,0 +1,12 @@
+.awards-page {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 760px;
+}
