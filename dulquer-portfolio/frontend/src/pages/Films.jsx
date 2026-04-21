@@ -25,6 +25,7 @@ const Films = () => {
         <span className="gold-tag">Complete Works</span>
         <h1 className="section-heading">Film<span>ography</span></h1>
         <p className="section-sub">Every film in Dulquer Salmaan's career, from 2012 to present.</p>
+        
 
         <div className="films-page__filters">
           <div className="filter-group">

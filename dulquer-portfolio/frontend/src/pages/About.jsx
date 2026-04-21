@@ -24,7 +24,8 @@ const familyImages = [
 ]
 
 const About = () => {
-  const { data: about, loading, error } = useFetch(getAbout);
+
+  const { data: about } = useFetch(getAbout);
 
   const info = about || {
     bio: "Dulquer Salmaan is an Indian actor, singer, and producer primarily working in Malayalam cinema, with successful ventures in Tamil, Telugu, and Hindi. Born on July 28, 1986, he has redefined the modern Indian star with his versatile performances and sophisticated style.",
@@ -34,7 +35,9 @@ const About = () => {
 
   return (
     <div className="about-wrapper">
+
       {/* HEADER SECTION */}
+
       <header className="dynamic-header about-wall">
         <div className="header-overlay">
           <div className="container">
