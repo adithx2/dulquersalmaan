@@ -22,7 +22,7 @@ app.use(express.json());
 
 // Database connection
 mongoose
-  .connect(process.env.MONGO_URI || 'mongodb+srv://adiths746_db_user:6StiwQRSoVwbMw95@cluster0.rcpppso.mongodb.net/DulquersalmanDB')
+  .connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB error:', err));
 
@@ -31,9 +31,9 @@ app.use('/api/films', filmRoutes);
 app.use('/api/awards', awardRoutes);
 app.use('/api/about', aboutRoutes);
 
-// Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Dulquer Portfolio API running' });
+app.get('/', (req, res) => {
+
+  res.send("Hello World")
 });
 
 // 404 handler
@@ -46,6 +46,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Server error', error: err.message });
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
