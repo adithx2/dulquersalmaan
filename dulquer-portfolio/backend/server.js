@@ -34,7 +34,7 @@ app.use('/api/about', aboutRoutes);
 app.get('/', (req, res) => {
 
   res.send("Hello World")
-});
+})
 
 // 404 handler
 app.use((req, res) => {
@@ -46,7 +46,6 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Server error', error: err.message });
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
